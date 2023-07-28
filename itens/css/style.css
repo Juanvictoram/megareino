@@ -1,0 +1,44 @@
+body {
+  background-color: #dbe3e8;
+  font-size: calc(1.42em + 1.42vw);
+
+  font-family: Roboto Slab;
+}
+p.small{
+line-height: 0.8;
+}
+img {
+ margin: 0px 2500px;
+}
+
+
+.barra {
+padding: 50px;
+display: flex;
+justify-content: center;
+text-align: center;
+background-color: black;
+}		
+
+label {
+  display: inline-block;
+  text-align: center;
+  
+  
+}
+input[type="text"] {
+  text-align: center;
+  width: 26%;
+  font-size: inherit;
+float:right;
+border-radius:50px;
+
+}
+input[type="number"] {
+  text-align: center;
+  width: 26%;
+  font-size: inherit;
+float:right;
+border-radius:50px;
+
+}
