@@ -1,0 +1,21 @@
+{
+  "background_color": "#d0d9db",
+  "description": "",
+  "dir": "ltr",
+  "display": "standalone",
+  "name": "Calculador de tributos do Mega Reino",
+  "orientation": "any",
+  "scope": "/",
+  "short_name": "Calculadora de tributos",
+  "start_url": "/",
+  "theme_color": "#d3dbde",
+  "categories": [
+    "education",
+    "finance",
+    "personalization",
+    "productivity"
+  ],
+  "screenshots": [],
+  "icons": [],
+  "shortcuts": []
+}

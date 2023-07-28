@@ -1,12 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Calculadora</title>
+	<title>Calculadora de tributos Mega Reino</title>
 	<meta charset="UTF-8">
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400&family=Roboto+Slab:wght@100;200;300;400;500;800&display=swap" rel="stylesheet">
-	<style>
+	<link rel="manifesto" href="%PUBLIC_URL%/manifest.json">
+  <link
+      rel="icon"
+      type="image/x-icon"
+      href="/Logo_mega_reino-6.png"
+    />
+  <style>
 		body {
 			background-color: #dbe3e8;
 			font-size: calc(1.42em + 1.42vw);
@@ -210,6 +216,11 @@ function calcular() {
 
   document.getElementById("remuneracao").addEventListener("input", calcular);
   document.getElementById("novaoferta").addEventListener("input", calcular);
+</script>
+<script>
+  if (typeof navigator.serviceWorker !== 'undfined') {
+    navigator.serviceWorker.register(pwabluideer-sw.js)
+  }
 </script>
 </body>
 </html>
