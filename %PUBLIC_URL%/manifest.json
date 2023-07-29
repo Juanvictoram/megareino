@@ -1,21 +1,22 @@
 {
-  "background_color": "#d0d9db",
-  "description": "",
+  "background_color": "#ffffff",
+  "description": "app para calcular tributos para menbros do mega reino area de membros dedicada para fieis da web para app",
   "dir": "ltr",
   "display": "standalone",
-  "name": "Calculador de tributos do Mega Reino",
+  "name": "calculadoradetributos.netlify",
   "orientation": "any",
   "scope": "/",
-  "short_name": "Calculadora de tributos",
+  "short_name": "calculadoradetributos.netlify",
   "start_url": "/",
-  "theme_color": "#d3dbde",
-  "categories": [
-    "education",
-    "finance",
-    "personalization",
-    "productivity"
-  ],
+  "theme_color": "#ffffff",
+  "categories": [],
   "screenshots": [],
-  "icons": [],
+  "icons": [
+    {
+      "src": "/Logo_mega_reino-6.png",
+      "type": "image/png",
+      "sizes": "524x297"
+    }
+  ],
   "shortcuts": []
 }
