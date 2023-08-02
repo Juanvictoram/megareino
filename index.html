@@ -63,7 +63,7 @@
   padding: 20px;
   border: solid 3px #00000000;
    border-radius:30px;
-   background-color: black;
+   background-color: rgb(150, 147, 147);
    color: aliceblue;
    font-size: 30px;
     }
@@ -77,45 +77,51 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      margin-top: -20px;
+      margin-bottom: 140px;
     }
+    img{
+      align:left; width:20%; height:20%;
+    }
+  
 	</style>
 </head>
 
 <body>
 	<div class="logo">
-<img style="align:left; width:20%; height:20%;" src="logo-2.png"/>
+<img  src="logo-2.png"/>
 </div>
 <p style="text-align:center">	
    <label style="font-weight:bold; color: black; font-size: calc(1em + 1vw);">CÁLCULO DE TRIBUTOS</label><br><br>
 <p>
 	
-<label style="font-weight:bold; color: black;" for="remuneracao">INFORME SUA REMUNERAÇÃO.:</label>
+<label style="font-weight:bold; color: black; margin: 0px 20px;" for="remuneracao">INFORME SUA REMUNERAÇÃO.:</label>
 	<input style="width:34%;" type="text" value="" id="remuneracao"><br>
-
+  <div class="center">
 <p class="small">
 	<label style="font-weight:bold;" for="primicias">PRIMÍCIAS (1/30):</label>
 	<input type="text" id="primicias" readonly><br>
- <label style="color: black; font-size: calc(0.6em + 0.6vw);">Gn 4:1-7 / Lv 2: 12 / Ez 44:30 / Ne 10:37</label><br>
- <label style="color: black; font-size: calc(0.6em + 0.6vw);">Ne 12:44 / Dt 18:1-4 / Dt 26:1-4 / 2Cr 31: 4-11</label><br>
+ <label style="color: black; font-size: calc(0.5em + 0.5vw);">Gn 4:1-7 / Lv 2: 12 / Ez 44:30 / Ne 10:37</label><br>
+ <label style="color: black; font-size: calc(0.5em + 0.5vw);">Ne 12:44 / Dt 18:1-4 / Dt 26:1-4 / 2Cr 31: 4-11</label><br>
  
 </p>
 <p class="small">
 	<label style="font-weight:bold;" for="dizimo"> DÍZIMO (10%):</label>
 	<input type="text" id="dizimo" readonly><br>
- <label style="color: black;  font-size: calc(0.6em + 0.6vw);">Gn 14:18-20 / Lv 27:32 / Dt 26:12-15 / Ne 10:37</label><br>
- <label style="color: black; font-size: calc(0.6em + 0.6vw);">2Cr 31:4-12 / Ml 3:6-10 / Mt 23:23-24 / Hb 7:1-10</label><br>
+ <label style="color: black;  font-size: calc(0.5em + 0.5vw);">Gn 14:18-20 / Lv 27:32 / Dt 26:12-15 / Ne 10:37</label><br>
+ <label style="color: black; font-size: calc(0.5em + 0.5vw);">2Cr 31:4-12 / Ml 3:6-10 / Mt 23:23-24 / Hb 7:1-10</label><br>
 </p>
 
 <p class="small">
 	<label style="font-weight:bold;" for="ofminsoc">OFERTA MINIST. DE SOCORRO (2%):</label>
 	<input type="text" id="ofminsoc" readonly><br>
- <label style="color: black;font-size: calc(0.6em + 0.6vw);">Gn 22: 1-19 / Ex 23:14-17 / IRe 17:8-24</label><br>
- <label style="color: black;font-size: calc(0.6em + 0.6vw);">2Re 8:1-7 / Lc 8:1-3 / Mt 21:33-46 / Fp 4:10-19</label><br>
+ <label style="color: black;font-size: calc(0.5em + 0.5vw);">Gn 22: 1-19 / Ex 23:14-17 / IRe 17:8-24</label><br>
+ <label style="color: black;font-size: calc(0.5em + 0.5vw);">2Re 8:1-7 / Lc 8:1-3 / Mt 21:33-46 / Fp 4:10-19</label><br>
 </p>
 
 <p class="small">
 	<label style="font-weight:bold;" for="ofgrat">OFERTA GRATIDÃO (Mínimo 0,10%):</label>
-	<input type="text" id="ofgrat" readonly><lbr>
+	<input type="text" id="ofgrat" readonly><br>
  <label style="color: black;font-size: calc(0.6em + 0.6vw);">Ml 1:6-10 / Ex 25:2-3 </label><br>
  <label style="color: black;font-size: calc(0.6em + 0.6vw);"> Ex 34:20</label><br>
 </p>
@@ -140,16 +146,18 @@
  <label style="color: black;font-size: calc(0.6em + 0.6vw);">Sl 2:7-8 / Sl 96:3 / Is 6:8 / Mt 28:19-20 /Mc 16:15</label><br>
  <label style="color: black;font-size: calc(0.6em + 0.6vw);">At :1:8 / II Co 8:1-4 / Fl 4:10-16 / Hb 13:16</label><br>
 </p>
+</div>
 
-
- <label style="float:left;font-weight:bold;" for="novaoferta">Escreva o nome da sua oferta:</label><br>
-	<input style="float:left;text-align: left; width: 64%;" type="text" id="nomenovaferta">
+<p class="small">
+  <label style="font-weight:bold;color: black; font-size: calc(0.7em + 0.7vw); margin-top: -30px; "  for="novaoferta">ESCREVA O NOME DA SUA OFERTA:</label>
+	<input style="text-align: center; width: 35%; " type="text" id="nomenovaferta"><br><br>
  <label style="font-weight:bold;" for="pont"></label>
- <input style="width: 34%;" type="text" id="novaoferta" value=""><br><br>
-
+ 
+</p>
 <p style="text-align:left">
-	<label style="font-weight:bold;color: black; font-size: calc(0.9em + 0.9vw);" for="totaloferta">TOTAL DA CONTRIBUIÇÃO: </label>
+	<label style="font-weight:bold;color: black; font-size: calc(0.7em + 0.7vw); margin-top: -30px; " for="totaloferta">TOTAL DA CONTRIBUIÇÃO: </label>
 <input style="background-color:white; color:black; width: 38%; font-size: calc(0.9em + 0.9vw);" type="text" id="totaloferta" readonly><br><br>
+<input style="width: 0%; background-color: #dbe3e8;" type="text" id="novaoferta" value=""><br>
 </p>
 <p style="text-align:center;">
  <label style="font-weight:bold;font-size: calc(0.75em + 0.75vw);">"Ninguém apareça diante de mim de mãos vazias"</label><br>
@@ -157,7 +165,9 @@
 
 </p>
 <div class="botao">
-<button>COPIE O PIX</button><br>
+<button onclick="carConteudo()">COPIE O PIX</button><br><br>
+<span id="conteudo"></span>
+
 <button onclick="window.print()">PRINT DA TELA</button>
 </div>
 
@@ -244,11 +254,11 @@ function calcular() {
 
   document.getElementById("remuneracao").addEventListener("input", calcular);
   document.getElementById("novaoferta").addEventListener("input", calcular);
-</script>
-<script>
-  if (typeof navigator.serviceWorker !== 'undfined') {
-    navigator.serviceWorker.register(pwabluilder-sw.js)
+
+  function carConteudo(){
+    document.getElementById("conteudo").innerText = ("megareino777@gmail.com")
   }
 </script>
+
 </body>
 </html>
