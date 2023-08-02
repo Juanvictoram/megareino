@@ -44,17 +44,36 @@
 			width: 23%;
 			font-size: inherit;
    float:right;
-   border-radius:25px;
+   border: solid 3px #00000000;
+   border-radius:30px ;
 		}
 		input[type="number"] {
 			text-align: center;
-			width: 26%;
+			width: 19%;
 			font-size: 20px;
    float:right;
-   border-radius:25px;
+   border: solid 3px #00000000;
+   border-radius:30px;
 		}
     img {
       margin-left: 400px;
+    }
+    button {
+ 
+  gap: 30px;
+  margin-top: 15px;
+  padding: 20px;
+  border: solid 3px #00000000;
+   border-radius:30px;
+   background-color: black;
+   color: aliceblue;
+   font-size: 30px;
+    }
+    .botao {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      
     }
 	</style>
 </head>
@@ -70,14 +89,14 @@
 	<input style="width:34%;" type="text" value="" id="remuneracao"><br>
 
 <p class="small">
-	<label style="font-weight:bold;" for="primicias">PRIMÍCIAS (1/30)................................:</label>
+	<label style="font-weight:bold;" for="primicias">PRIMÍCIAS (1/30):</label>
 	<input type="text" id="primicias" readonly><br>
  <label style="color: black; font-size: calc(0.6em + 0.6vw);">Gn 4:1-7 / Lv 2: 12 / Ez 44:30 / Ne 10:37</label><br>
  <label style="color: black; font-size: calc(0.6em + 0.6vw);">Ne 12:44 / Dt 18:1-4 / Dt 26:1-4 / 2Cr 31: 4-11</label><br>
- <label style="color: black; font-size: calc(0.6em + 0.6vw);">Pv 3:9-10 / Rm 11:16 / Hb 11:4</label><br>
+ 
 </p>
 <p class="small">
-	<label style="font-weight:bold;" for="dizimo"> DÍZIMO (10%).....................................:</label>
+	<label style="font-weight:bold;" for="dizimo"> DÍZIMO (10%):</label>
 	<input type="text" id="dizimo" readonly><br>
  <label style="color: black;  font-size: calc(0.6em + 0.6vw);">Gn 14:18-20 / Lv 27:32 / Dt 26:12-15 / Ne 10:37</label><br>
  <label style="color: black; font-size: calc(0.6em + 0.6vw);">2Cr 31:4-12 / Ml 3:6-10 / Mt 23:23-24 / Hb 7:1-10</label><br>
@@ -93,25 +112,26 @@
 <p class="small">
 	<label style="font-weight:bold;" for="ofgrat">OFERTA GRATIDÃO (Mínimo 0,10%):</label>
 	<input type="text" id="ofgrat" readonly><lbr>
- <label style="color: black;font-size: calc(0.6em + 0.6vw);">Ml 1:6-10 / Ex 25:2-3 / Ex 34:20</label><br>
+ <label style="color: black;font-size: calc(0.6em + 0.6vw);">Ml 1:6-10 / Ex 25:2-3 </label><br>
+ <label style="color: black;font-size: calc(0.6em + 0.6vw);"> Ex 34:20</label><br>
 </p>
 
 <p class="small">
-	<label style="font-weight:bold;" for="ofsem">SEMEADURA (Mínimo 0,40%)...........:</label>
+	<label style="font-weight:bold;" for="ofsem">SEMEADURA (Mínimo 0,40%):</label>
 	<input type="text" id="ofsem" readonly><br>
  <label style="color: black;font-size: calc(0.6em + 0.6vw);">Gn 26:12-13 / Gl 6:8 / Tg 1:7-8 / IRe 17:8-16</label><br>
  <label style="color: black; font-size: calc(0.6em + 0.6vw);">Mc 4: 26-29 / 2Co 9:6-10</label><br>
 </p>
 
 <p class="small">
-	<label style="font-weight:bold;" for="ofisr">OFERTA PARA ISRAEL (1%)...............:</label>
+	<label style="font-weight:bold;" for="ofisr">OFERTA PARA ISRAEL (1%):</label>
 	<input type="text" id="ofisr" readonly><br>
  <label style="color: black;font-size: calc(0.6em + 0.6vw);">Sl 122:6 / Jo 4:22-23 / Hb 11:8-10 / Sl 102:13-22</label><br>
  <label style="color: black;font-size: calc(0.6em + 0.6vw);">Is 60:10-11 / Zc 14:16-20 / Rm 15:27</label><br>
 </p>
 
 <p class="small">
-	<label style="font-weight:bold;" for="ofmis">OFERTA DE MISSÕES (2%).................:</label>
+	<label style="font-weight:bold;" for="ofmis">OFERTA DE MISSÕES (2%):</label>
 	<input type="text" id="ofmis" readonly><br>
  <label style="color: black;font-size: calc(0.6em + 0.6vw);">Sl 2:7-8 / Sl 96:3 / Is 6:8 / Mt 28:19-20 /Mc 16:15</label><br>
  <label style="color: black;font-size: calc(0.6em + 0.6vw);">At :1:8 / II Co 8:1-4 / Fl 4:10-16 / Hb 13:16</label><br>
@@ -130,8 +150,12 @@
 <p style="text-align:center;">
  <label style="font-weight:bold;font-size: calc(0.75em + 0.75vw);">"Ninguém apareça diante de mim de mãos vazias"</label><br>
  <label style="font-weight:bold;font-size: calc(0.7em + 0.7vw);">Êxodo 34:20-b</label><br><br>
- <label style="font-weight:bold;font-size: calc(1em + 1vw);">PIX: megareino777@gmail.com</label><br>
+
 </p>
+<div class="botao">
+<button>COPIE O PIX</button><br>
+<button onclick="window.print()">PRINT DA TELA</button>
+</div>
 
 
 <script>
