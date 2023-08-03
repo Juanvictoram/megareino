@@ -38,6 +38,7 @@
 			text-align: center;
       font-size: 28px;
       
+      
 		}
 		input[type="text"] {
 			text-align: center;
@@ -56,16 +57,18 @@
    border-radius:30px;
 		}
     
-    button {
+    .print {
  
   gap: 30px;
-  margin-top: 15px;
-  padding: 20px;
-  border: solid 3px #00000000;
+  margin-top: 0px;
+  padding: 15px;
+  border: solid 3px #ffffff00;
    border-radius:30px;
    background-color: rgb(150, 147, 147);
    color: aliceblue;
    font-size: 30px;
+   margin-top: 30px;
+   cursor: pointer;
     }
     .botao {
       display: flex;
@@ -83,7 +86,64 @@
     img{
       align:left; width:20%; height:20%;
     }
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  top: 90%;
   
+}
+  .label {
+    padding: 10px;
+    font-size: 24px;
+    color: aliceblue;
+    border: none;
+    border-radius: 20px;
+    text-align: center;
+    width: 30%;
+    padding: 10px;
+    background-color: rgb(150, 147, 147);
+  }
+  .copy-text{
+position: relative;
+padding: 10px;
+background: #dbe3e8;
+border: 1px solid #ddd;
+border-radius: 10px;
+display: flex;
+  }
+  .copy-text input.copy-text{
+    padding: 10px;
+    font-size: 18px;
+    color: #555;
+    border: none;
+    outline: none;
+
+  }
+  .copy-text button{
+    padding: 20px;
+    background: #5280f5;
+    color: #ffffff;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-left: 10px;
+  }
+  .copy-text button:active{
+    background: #859edf;
+  }
+  .copy-text button::before {
+    
+  }
+  .copy-text button::after {
+    
+  }
+  .copy-text button::before,
+  .copy-text button::after {
+    display: block;
+  }
 	</style>
 </head>
 
@@ -164,11 +224,20 @@
  <label style="font-weight:bold;font-size: calc(0.7em + 0.7vw);">Êxodo 34:20-b</label><br><br>
 
 </p>
+<div class="container">
+  <div class="label">
+  Chave Pix
+  </div>
+  <div class="copy-text">
+    <input style="width: 100%; " type="text" class="text" value="megareino777@gmail.com">
+    <button>
+      <i class="fa fa-clone">copy</i>
+    </button>
+  </div>
+  </div>
 <div class="botao">
-<button onclick="carConteudo()">COPIE O PIX</button><br><br>
-<span id="conteudo"></span>
 
-<button onclick="window.print()">PRINT DA TELA</button>
+<button onclick="window.print()" class="print">PRINT DA TELA</button>
 </div>
 
 
@@ -256,8 +325,20 @@ function calcular() {
   document.getElementById("novaoferta").addEventListener("input", calcular);
 
   function carConteudo(){
-    document.getElementById("conteudo").innerText = ("megareino777@gmail.com")
+    document.getElementById("conteudo").innerHTML = ("megareino777@gmail.com")
   }
+  let copyText = document.querySelector(".copy-text");
+  copyText.querySelector("button").addEventListener("click", function(){
+    let input = copyText.querySelector("input.text");
+    input.select()
+    document.execCommand("copy");
+    copyText.classList.add("active");
+    window.getSelection().removeAllRanges();
+    
+    setTimeout(function(){
+      copyText.classList.remove("active");
+    },2500)
+  })
 </script>
 
 </body>
