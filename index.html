@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta name="theme-color" content="#f9f9f9">
+  <link rel="canonical"  href="https://calculadoradetributos.netlify.app/">
+  <meta name="apple-mobile-web-app-capable" content="yes"> 
+  <meta name="apple-mobile-web-app-status-bar-style" content="black"> 
+  <meta name="apple-mobile-web-app-title" content="edson iOS"> 
+  <link rel="apple-touch-icon" href="images/icons/icon-152x152.png"> 
+  <link rel="manifest" href="manifest.json" />  
+
 	<title>Calculadora de tributos Mega Reino</title>
 	<meta charset="UTF-8">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -150,6 +158,19 @@ display: flex;
 </head>
 
 <body>
+  <script> 
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('sw.js')
+    .then(function (){
+      console.log('serviceWorker registered');
+    })
+    .cacth(function() {
+      console.warn('serviceWorker failed');
+    })
+}
+ 
+ 
+</script> 
 	<div class="logo">
 <img  src="logo-2.png"/>
 </div>
@@ -342,6 +363,8 @@ function calcular() {
     },2500)
   })
 </script>
+
+
 
 </body>
 </html>
