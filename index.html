@@ -69,14 +69,16 @@
     .print {
  
   gap: 30px;
-  margin-top: 0px;
-  padding: 15px;
+  margin-right: 0px;
+  display: flex;
+ 
+  padding: 10px;
   border: solid 3px #ffffff00;
    border-radius:30px;
    background-color: rgb(150, 147, 147);
    color: aliceblue;
    font-size: 30px;
-   margin-top: 30px;
+  margin-left: -10px;
    cursor: pointer;
     }
     .botao {
@@ -90,11 +92,11 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      margin-top: -100px;
-      margin-bottom: 9px;
+      margin-top: -40px;
+      margin-bottom: 50px;
     }
     img{
-      align:left; width:20%; height:20%;
+      align:left; width:40%; height:40%;
     }
 .container {
   display: flex;
@@ -118,7 +120,7 @@
 position: relative;
 padding: 10px;
 background: #dbe3e8;
-border: 1px solid #ddd;
+border: none;
 border-radius: 10px;
 display: flex;
   }
@@ -128,18 +130,23 @@ display: flex;
     color: #555;
     border: none;
     outline: none;
-
+    
   }
   .copy-text button{
-    padding: 20px;
-    background: #5280f5;
-    color: #ffffff;
-    font-size: 18px;
+    padding: 12px 30px;
+    background: rgb(150, 147, 147);
+    color: aliceblue;
+    font-size: 30px;
     border: none;
     outline: none;
     border-radius: 10px;
     cursor: pointer;
-    margin-left: 10px;
+    margin-right: 0PX;
+    border: none;
+    border-radius:30px;
+    display: flex;
+    margin: 0PX;
+    
   }
   .copy-text button:active{
     background: #859edf;
@@ -153,6 +160,10 @@ display: flex;
   .copy-text button::before,
   .copy-text button::after {
     display: block;
+  }
+  .botao{
+    display: flex;
+    justify-content: space-between;
   }
 	</style>
 </head>
@@ -175,7 +186,7 @@ if ('serviceWorker' in navigator) {
 <img  src="logo-2.png"/>
 </div>
 <p style="text-align:center">	
-   <label style="font-weight:bold; color: black; font-size: calc(1em + 1vw);">CÁLCULO DE TRIBUTOS</label><br><br>
+   <label style="margin-top: 80px; font-weight:bold; color: black; font-size: calc(1em + 1vw);">CÁLCULO DE TRIBUTOS</label><br><br>
 <p>
 	
 <label style="font-weight:bold; color: black; " for="remuneracao">INFORME SUA REMUNERAÇÃO:</label>
@@ -247,14 +258,13 @@ if ('serviceWorker' in navigator) {
  <label style="font-weight:bold;font-size: calc(0.7em + 0.7vw);">Êxodo 34:20-b</label><br><br>
 
 </p>
+<div class="botao">
 <div class="container">
-  <div class="label">
-  Chave Pix
-  </div>
+  
   <div class="copy-text">
-    <input style="width: 100%; " type="text" class="text" value="megareino777@gmail.com">
+    <input style="width: 1%;border: none; background-color: #dbe3e8; color: #dbe3e8;" type="text" class="text" value="megareino777@gmail.com">
     <button>
-      <i class="fa fa-clone">copy</i>
+      <i class="fa fa-clone">CHAVE PIX</i>
     </button>
   </div>
   </div>
@@ -262,7 +272,7 @@ if ('serviceWorker' in navigator) {
 
 <button onclick="window.print()" class="print">PRINT DA TELA</button>
 </div>
-
+</div>
 
 <script>
 function calcular() {
