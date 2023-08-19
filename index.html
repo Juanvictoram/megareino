@@ -22,7 +22,7 @@
     />
   <style>
 		body {
-			background-color: #edf1f3;
+			background-color: #ebebe9;
 			font-size: calc(1.42em + 1.42vw);
       padding: 100px 20px;
       margin: 100px 0px;
@@ -73,9 +73,9 @@
   display: flex;
  
   padding: 10px;
-  border: solid 3px #ffffff00;
+  border: solid 3px #686d76;
    border-radius:30px;
-   background-color: rgb(199, 142, 37);
+   background-color: #ad8338;
    color: aliceblue;
    font-size: 30px;
   margin-left: -10px;
@@ -134,7 +134,7 @@ display: flex;
   }
   .copy-text button{
     padding: 12px 30px;
-    background: rgb(192, 146, 20);
+    background: #ad8338;
     color: aliceblue;
     font-size: 30px;
     border: none;
@@ -148,18 +148,26 @@ display: flex;
     margin: 0PX;
     
   }
+  button:hover {
+    background-color: #686d76;
+  }
   .copy-text button:active{
     background: #859edf;
+    color: #ebebe9;
+    border: none;
   }
   .copy-text button::before {
-    
+    color: #ebebe9;
+    border: none;
   }
   .copy-text button::after {
-    
+    color: #ebebe9;
+    border: none;
   }
   .copy-text button::before,
   .copy-text button::after {
     display: block;
+    border: none;
   }
   .botao{
     display: flex;
@@ -262,8 +270,8 @@ if ('serviceWorker' in navigator) {
 <div class="container">
   
   <div class="copy-text">
-    <input style="width: 1px;border: none; background-color: #edf1f3; color: #edf1f3; border-color: none;" type="text" class="text" value="megareino777@gmail.com">
-    <button>
+    <input style="width: 1px;border: none; background-color: transparent; color: #edf1f3; border-color: none;" type="text" class="text" value="megareino777@gmail.com">
+    <button id="copy-text">
       <i class="fa fa-clone">CHAVE PIX</i>
     </button>
   </div>
@@ -372,6 +380,11 @@ function calcular() {
       copyText.classList.remove("active");
     },2500)
   })
+  const btn = document.querySelector('#copy-text');
+
+  btn.addEventListener('click', function (){
+    alert("PIX COPIADO: megareino777@gmail.com");
+  });
 </script>
 
 
