@@ -67,26 +67,22 @@
    border: solid 3px #00000000;
    border-radius:30px;
 		}
-    
+    button {
+      padding: 12px 30px;
+    background: #ad8338;
+    color: aliceblue;
+    font-size: 30px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    }
     .print {
- 
-  gap: 30px;
-  margin-right: 0px;
-  display: flex;
- 
-  padding: 10px;
-  border: none;
-   border-radius:30px;
-   background-color: #ad8338;
-   color: aliceblue;
-   font-size: 30px;
-  margin-left: -10px;
-   cursor: pointer;
+
     }
     .botao {
       display: flex;
       align-items: center;
-      justify-content: space-around;
+      
       cursor: pointer;
     }
     .logo {
@@ -135,20 +131,7 @@ display: flex;
     
   }
   .copy-text button{
-    padding: 12px 30px;
-    background: #ad8338;
-    color: aliceblue;
-    font-size: 30px;
-    border: none;
-    outline: none;
-    border-radius: 10px;
-    cursor: pointer;
-    margin-right: 0PX;
-    border: none;
-    border-radius:30px;
-    display: flex;
-    margin: 0PX;
-    
+ 
   }
   button:hover {
     background-color: #686d76;
@@ -172,8 +155,26 @@ display: flex;
     border: none;
   }
   .botao{
+  justify-content: center;
+  align-items: center;
+  margin: 20px ;
+  }
+  footer {
+    margin-top: 100px;
+    margin-bottom: -180px;
+    font-size: 20px;
+  
+  }
+  .footer {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
+  }
+  .footerr {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 23px;
   }
 	</style>
 </head>
@@ -253,15 +254,16 @@ if ('serviceWorker' in navigator) {
 </div>
 
 <p class="small">
-  <label style="font-weight:bold;color: black; font-size: calc(0.7em + 0.7vw); margin-top: -30px; "  for="novaoferta">ESCREVA O NOME DA SUA OFERTA:</label>
-	<input style="text-align: center; width: 35%; " type="text" id="nomenovaferta"><br><br>
+  <label style="font-weight:bold;color: black; font-size: calc(0.7em + 0.7vw); margin-top: -30px; "  for="novaoferta">ESCREVA O NOME DA SUA OFERTA:</label><br> <br>
+  <input style="width: 20%; margin: 0px 13px ; ;" type="text" id="novaoferta" value="">
+	<input style="text-align: center; width: 74%; padding: -40px; " type="text" id="nomenovaferta"> <br><br>
  <label style="font-weight:bold;" for="pont"></label>
  
 </p>
 <p style="text-align:left">
 	<label style="font-weight:bold;color: black; font-size: calc(0.7em + 0.7vw); margin-top: -30px; " for="totaloferta">TOTAL DA CONTRIBUIÇÃO: </label>
 <input style="background-color:white; color:black; width: 38%; font-size: calc(0.9em + 0.9vw);" type="text" id="totaloferta" readonly><br><br>
-<input style="width: 0%; background-color: #edf1f3;" type="text" id="novaoferta" value=""><br>
+
 </p>
 <p style="text-align:center;">
  <label style="font-weight:bold;font-size: calc(0.75em + 0.75vw);">"Ninguém apareça diante de mim de mãos vazias"</label><br>
@@ -272,7 +274,7 @@ if ('serviceWorker' in navigator) {
 <div class="container">
   
   <div class="copy-text">
-    <input style="width: 1px;border: none; background-color: transparent; color: #edf1f3; border-color: none;" type="text" class="text" value="megareino777@gmail.com">
+    
     <button id="copy-text">
       <i class="fa fa-clone">COPIAR PIX</i>
     </button>
@@ -283,9 +285,7 @@ if ('serviceWorker' in navigator) {
 <button onclick="window.print()" class="print">PRINT DA TELA</button>
 </div>
 </div>
-<footer>
-  Copyright © 2023 | Mega Reino CNPJ: 15.255.556/0001-04
-</footer>
+
 <script>
 function calcular() {
    var remuneracao = 0.00;
@@ -369,29 +369,28 @@ function calcular() {
   document.getElementById("remuneracao").addEventListener("input", calcular);
   document.getElementById("novaoferta").addEventListener("input", calcular);
 
-  function carConteudo(){
-    document.getElementById("conteudo").innerHTML = ("megareino777@gmail.com")
-  }
-  let copyText = document.querySelector(".copy-text");
-  copyText.querySelector("button").addEventListener("click", function(){
-    let input = copyText.querySelector("input.text");
-    input.select()
-    document.execCommand("copy");
-    copyText.classList.add("active");
-    window.getSelection().removeAllRanges();
-    
-    setTimeout(function(){
-      copyText.classList.remove("active");
-    },2500)
-  })
+  
   const btn = document.querySelector('#copy-text');
 
   btn.addEventListener('click', function (){
     alert("PIX COPIADO: megareino777@gmail.com");
+    btn.addEventListener('click', function(){
+      copy(' megareino777@gmail.com')
+    })
   });
 </script>
 
 
 
 </body>
+<div class="footer">
+<footer>
+  Copyright © 2023 | Mega Reino CNPJ: 15.255.556/0001-04 <br>
+  
+</footer>
+
+</div>
+<div class="footerr">
+<footer>Desenvolvido por : juan victor</footer>
+</div>
 </html>
