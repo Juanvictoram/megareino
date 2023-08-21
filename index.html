@@ -176,6 +176,14 @@ display: flex;
     align-items: center;
     margin-top: 50px;
   }
+  .inputs {
+    display: flex;
+    justify-content: space-between;
+  height: 50px;
+  margin-top: -5px;
+ margin-bottom: -25px;
+  }
+  
 	</style>
 </head>
 
@@ -254,9 +262,11 @@ if ('serviceWorker' in navigator) {
 </div>
 
 <p class="small">
-  <label style="font-weight:bold;color: black; font-size: calc(0.7em + 0.7vw); margin-top: -30px; "  for="novaoferta">ESCREVA O NOME DA SUA OFERTA:</label><br> <br>
-  <input style="width: 20%; margin: 0px 13px ; ;" type="text" id="novaoferta" value="">
-	<input style="text-align: center; width: 67%; padding: -40px; " type="text" id="nomenovaferta"> <br><br>
+  <label style="font-weight:bold;color: black; font-size: calc(0.7em + 0.7vw); margin-top: -30px; "  for="novaoferta">ESCREVA O NOME DA SUA OFERTA:</label><br> 
+  <div class="inputs">
+	<input style="text-align: center; width: 78%; padding: -40px; " type="text" id="nomenovaferta">
+  <input style=" margin: 0px 13px ; ;" type="text" id="novaoferta" value=""> <br>
+</div>
  <label style="font-weight:bold;" for="pont"></label>
  
 </p>
