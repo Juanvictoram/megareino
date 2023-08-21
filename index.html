@@ -285,9 +285,8 @@ if ('serviceWorker' in navigator) {
   
   <div class="copy-text">
     
-    <button id="copy-text">
-      <i class="fa fa-clone">COPIAR PIX</i>
-    </button>
+    <button id="btnCopiar">COPIAR PIX</button>
+    <p id="chavePix" style="display: none;">megareino777@gmail.com</p>
   </div>
   </div>
 <div class="botao">
@@ -379,15 +378,32 @@ function calcular() {
   document.getElementById("remuneracao").addEventListener("input", calcular);
   document.getElementById("novaoferta").addEventListener("input", calcular);
 
-  
-  const btn = document.querySelector('#copy-text');
 
-  btn.addEventListener('click', function (){
-    alert("PIX COPIADO: megareino777@gmail.com");
-    btn.addEventListener('click', function(){
-      copy(' megareino777@gmail.com')
-    })
-  });
+  document.addEventListener("DOMContentLoaded", function() {
+    var btnCopiar = document.getElementById("btnCopiar");
+    var chavePix = document.getElementById("chavePix");
+
+    btnCopiar.addEventListener("click", function() {
+        // Cria um elemento temporário de input
+        var inputTemp = document.createElement("input");
+        inputTemp.value = chavePix.textContent;
+
+        // Anexa o elemento temporário ao corpo do documento
+        document.body.appendChild(inputTemp);
+
+        // Seleciona o conteúdo do input
+        inputTemp.select();
+        inputTemp.setSelectionRange(0, 99999); // Para dispositivos móveis
+
+        // Copia o conteúdo para a área de transferência
+        document.execCommand("copy");
+
+        // Remove o elemento temporário
+        document.body.removeChild(inputTemp);
+
+        alert("PIX COPIADO: megareino777@gmail.com");
+    });
+});
 </script>
 
 
