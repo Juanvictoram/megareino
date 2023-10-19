@@ -1,0 +1,21 @@
+{
+    "name": "Tributos Mega Reino",
+    "short_name": "Mega reino",
+    "start_url": ".",
+    "display": "standalone",
+    "background_color": "#fff",
+    "description": "App para mebros do mega reino calcular Tributos.",
+    "icons": [
+      
+      
+      {
+        "src": "/icon-512x512.png",
+        "sizes": "384x384",
+        "type": "image/png"
+      }
+      
+      
+    ]
+
+    
+  }

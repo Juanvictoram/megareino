@@ -7,8 +7,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black"> 
   <meta name="apple-mobile-web-app-title" content="edson iOS"> 
   <link rel="apple-touch-icon" href="images/icons/icon-152x152.png"> 
-  <link rel="manifest" href="manifest.json" />  
-
+   
+  <link rel="manifest" href="/manifest.webmanifest" />
 	<title>Calculadora de tributos Mega Reino</title>
 	<meta charset="UTF-8">
   <link href="https://fonts.cdnfonts.com/css/avenir" rel="stylesheet">
@@ -189,16 +189,7 @@ display: flex;
 </head>
 
 <body>
-  <script> 
-if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('sw.js')
-    .then(function (){
-      console.log('serviceWorker registered');
-    })
-    .cacth(function() {
-      console.warn('serviceWorker failed');
-    })
-}
+
  
  
 </script> 
@@ -406,7 +397,7 @@ function calcular() {
     });
 });
 </script>
-
+<script src="index.js"></script>
 
 
 </body>
